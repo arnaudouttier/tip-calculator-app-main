@@ -1,0 +1,51 @@
+const billAmount = document.querySelector("#bill-amount");
+const tipResult = document.querySelector(".result-tip-amount .result-output");
+const personResult = document.querySelector(".result-total .result-output");
+
+const convertToNumber = (x, base) => {
+  const parsed = parseFloat(x, base);
+  if (isNaN(parsed)) {
+    return 0;
+  }
+  return parsed;
+};
+
+const calculateTip = (event) => {
+  
+};
+
+const tipAmount = (billTotal, percentageTip) => {
+  let result =
+    (convertToNumber(billTotal.value, 10) *
+      convertToNumber(percentageTip.value, 10)) /
+    100;
+  return result;
+};
+
+const totalPerson = (billTotal, TotalPerson) => {
+  let t = tipAmount;
+  let result =
+    convertToNumber(billTotal.value, 10) +
+    t / convertToNumber(TotalPerson.value, 10);
+  return result;
+};
+
+document.querySelectorAll(".percentage-btn").forEach((btn) => {
+  btn.addEventListener("click", (event) => {
+    tipResult.innerHTML = tipAmount(billAmount, event.currentTarget);
+  });
+});
+
+document.querySelector("#custom-tip").addEventListener("change", (event) => {
+  tipResult.innerHTML = tipAmount(billAmount, event.currentTarget);
+});
+
+document.querySelector("#people-number").addEventListener("change", (event) => {
+  personResult.innerHTML = totalPerson(billAmount, event.currentTarget);
+});
+
+document.querySelector(".bill-reset").addEventListener("click", () => {
+  billAmount.value = "";
+  tipResult.innerHTML = 0;
+  personResult.innerHTML = 0;
+});

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>AO Tip Calculator Frontend Mentor</title>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <section class="bill">
+          <label for="bill-amount">Bill</label>
+          <input
+            type="text"
+            name="bill-amount"
+            id="bill-amount"
+            class="bill-input"
+            value="0"
+          />
+          <div class="bill-percentage">
+            <p>Select Tip %</p>
+            <button id="five-perc-btn" class="btn percentage-btn" value="5">
+              5%
+            </button>
+            <button id="ten-perc-btn" class="btn percentage-btn" value="10">
+              10%
+            </button>
+            <button id="fifteen-perc-btn" class="btn percentage-btn" value="15">
+              15%
+            </button>
+            <button id="twfive-perc-btn" class="btn percentage-btn" value="25">
+              25%
+            </button>
+            <button id="fifty-perc-btn" class="btn percentage-btn" value="50">
+              50%
+            </button>
+            <input
+              type="number"
+              name="custom-tip"
+              id="custom-tip"
+              class="btn percentage-btn"
+              value="0"
+              min="0"
+              max="100"
+            />
+          </div>
+          <div class="number-people-group">
+            <label for="people-number">Number of People</label>
+            <span class="span-input-warning">Can't be zero</span>
+            <input
+              type="number"
+              name="people-number"
+              id="people-number"
+              class="bill-input"
+              value="1"
+              min="0"
+            />
+          </div>
+        </section>
+        <section class="bill-result">
+          <div class="result-tip-amount">
+            <h3 class="result-title">Tip Amount <span>/Person</span></h3>
+            <h2 class="result-output">$ 0.00</h2>
+          </div>
+          <div class="result-total">
+            <h3 class="result-title">Total <span>/Person</span></h3>
+            <h2 class="result-output">$ 0.00</h2>
+          </div>
+          <button class="btn bill-reset">RESET</button>
+        </section>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
