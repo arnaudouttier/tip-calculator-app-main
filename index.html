@@ -8,16 +8,17 @@
     <title>AO Tip Calculator Frontend Mentor</title>
   </head>
   <body>
-    <main>
-      <div class="card">
-        <section class="bill">
+    <main id="main">
+      <div class="calculator">
+        <section class="calculator-inputs">
           <label for="bill-amount">Bill</label>
           <input
-            type="text"  
+            type="text"
             name="bill-amount"
             id="bill-amount"
             class="bill-input"
-            value="0"
+            value=""
+            placeholder="$ 0.00"
           />
           <div class="bill-percentage">
             <p>Select Tip %</p>
@@ -40,10 +41,10 @@
               type="number"
               name="custom-tip"
               id="custom-tip"
-              class="btn percentage-btn"
-              value="0"
+              value=""
               min="0"
               max="100"
+              placeholder="CUSTOM"
             />
           </div>
           <div class="number-people-group">
@@ -54,12 +55,13 @@
               name="people-number"
               id="people-number"
               class="bill-input"
-              value="1"
+              value=""
               min="0"
+              placeholder="$ 0.00"
             />
           </div>
         </section>
-        <section class="bill-result">
+        <section class="calculator-result">
           <div class="result-tip-amount">
             <h3 class="result-title">Tip Amount <span>/Person</span></h3>
             <h2 class="result-output">$ 0.00</h2>

@@ -47,11 +47,11 @@ const renderResultBill = (aTip, ttPerson) => {
 };
 
 const reset = () => {
-  billAmount.value = "0";
-  customTip.value = "0";
-  nbOfPeople.value = "0";
-  tipResult.innerHTML = 0;
-  personResult.innerHTML = 0;
+  billAmount.value = "";
+  customTip.value = "";
+  nbOfPeople.value = "";
+  tipResult.innerHTML = `$ 0.00`;
+  personResult.innerHTML = `$ 0.00`;
 };
 
 const calculateTip = () => {
@@ -75,5 +75,5 @@ const calculateTip = () => {
   );
 };
 
-document.querySelector(".card").addEventListener("change", calculateTip);
+document.querySelector(".calculator").addEventListener("change", calculateTip);
 document.querySelector(".bill-reset").addEventListener("click", reset);

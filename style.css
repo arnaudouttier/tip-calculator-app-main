@@ -1,43 +1,120 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 :root {
-  --very_dark_cyan: hsl(183, 100%, 15%);
-  --dark_grayish_cyan: hsl(186, 14%, 43%);
-  --grayish_cyan: hsl(184, 14%, 56%);
-  --light_grayish_cyan: hsl(185, 41%, 84%);
-  --very_light_grayish_cyan: hsl(189, 41%, 97%);
-  --white: hsl(0, 0%, 100%);
+  /* Color */
+  --clr_000: hsl(0, 0%, 100%);
+  --clr_100: hsl(189, 41%, 97%);
+  --clr_200: hsl(185, 41%, 84%);
+  --clr_300: hsl(172, 67%, 45%);
+  --clr_400: hsl(184, 14%, 56%);
+  --clr_500: hsl(186, 14%, 43%);
+  --clr_600: hsl(183, 100%, 15%);
+  --clr_700: hsl(347, 71%, 39%);
 
-  --primary_color: blue;
-  --primary_font: "Roboto", sans-serif;
-  --bg_page: hsl(172, 67%, 45%);
+  /* Sizes */
+  --size_1: 0.5rem; /* 8px */
+  --size_2: 0.75rem; /* 12px */
+  --size_3: 1rem; /* 16px */
+  --size_4: 1.5rem; /* 20px */
+  --size_5: 2rem; /* 32px */
+  --size_6: 2.5rem; /* 8px */
+
+  --size_7: 920px;
+
+  /* Font */
+  --primary_font: "Space Mono", monospace;
+
+  /* Page */
+  --bg_page: var(--clr_200);
+
+  /* Buttons */
+  --button_bg: var(--clr_600);
+  --button_active_bg: var(--clr_300);
+  --button_active_border: var(--clr_300);
+  --button_text_color: var(--clr_100);
+  --button_text_color_active: var(--clr_100);
+  --button_warning_border_color: var(--clr_700);
+
+  /* Iputs */
+  --input_bg_color: var(--clr_200);
+  --input_border_color_active: var(--clr_300);
+
+  /* calculator  */
+  --calculator_width: var(--size_7);
+  --calculator_bg: var(--clr_100);
+  --calculator_border_radius: var(--size_4);
+  --calculator_padding: var(--size_5);
+
+  /* calculator-inputs */
+  --calculator_inputs_label_color: var(--clr_500);
+
+  /* calculator-result */
+  --calculator_result_bg: var(--clr_600);
+  --calculator_result_padding: var(--size_4);
+  --calculator_result_label_color: var(--clr_100);
+  --calculator_result_border_radius: var(--size_3);
 }
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  font-family: var(--primary_font);
-  background-color: var(--bg_page);
-  padding: 4rem;
+*:focus {
+  outline: 0;
 }
 
-.btn {
+button {
   width: 4rem;
   height: 3rem;
+  border: 0;
+  color: var(--clr_000);
+  background-color: transparent;
+  cursor: pointer;
+}
+.btn {
+  background-color: var(--button_bg);
 }
 
-input {
+input:not(#custom-tip) {
   text-align: right;
   width: 100%;
   height: 4rem;
-  outline: none;
+  border: 0;
+  background-color: var(--input_bg_color);
+  cursor: pointer;
 }
 
 input:focus {
-  border: 3px solid blue;
+  border: 3px solid var(--button_active_border) !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary_font);
+  background-color: var(--bg_page);
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.calculator {
+  width: min(100vw, var(--calculator_width));
+  background-color: var(--calculator_bg);
+  padding: var(--calculator_padding);
+  border-radius: var(--calculator_border_radius);
+}
+
+.calculator-result {
+  padding: var(--calculator_result_padding);
+  background-color: var(--calculator_result_bg);
+  border-radius: var(--calculator_result_border_radius);
 }
 
 .span-input-warning {
@@ -45,10 +122,9 @@ input:focus {
 }
 
 .number-people-group.warning .span-input-warning {
-  color: red;
+  color: var(--button_warning_border_color);
 }
 
-.number-people-group.warning input,
-.number-people-group.warning input:focus {
-  border: 2px solid red !important;
+.number-people-group.warning input {
+  border: 2px solid var(--button_warning_border_color) !important;
 }
