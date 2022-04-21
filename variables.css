@@ -86,11 +86,12 @@
   --calculator_bg: var(--clr_100);
   --calculator_border_radius: var(--size_4);
   --calculator_section_margin: var(--size_5);
-  --calculator_padding: clamp(
-    var(--size_4),
-    calc(1.25rem + ((1vw - 0.234375rem) * 3.2415)),
-    var(--size_6)
-  );
+  --calculator_padding: var(--size_5)
+    clamp(
+      var(--size_4),
+      calc(1.25rem + ((1vw - 0.234375rem) * 3.2415)),
+      var(--size_6)
+    );
 
   /* CALCULATOR INPUTS */
 
