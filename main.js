@@ -1,10 +1,12 @@
 const billAmount = document.querySelector("#bill-amount");
 const customTip = document.querySelector("#custom-tip");
-const numberPeopleGroup = document.querySelector(".number-people-group");
-const spanWarning = document.querySelector(".span-input-warning");
+const numberPeopleGroup = document.querySelector(".calculator-people");
+const spanWarning = document.querySelector(".span-warning");
 const nbOfPeople = document.querySelector("#people-number");
-const tipResult = document.querySelector(".result-tip-amount .result-output");
-const personResult = document.querySelector(".result-total .result-output");
+const tipResult = document.querySelector(
+  ".calculator-tip-amount .result-total"
+);
+const personResult = document.querySelector(".calculator-total .result-total");
 
 let np = 0;
 var percentageButton = 0;
@@ -76,4 +78,4 @@ const calculateTip = () => {
 };
 
 document.querySelector(".calculator").addEventListener("change", calculateTip);
-document.querySelector(".bill-reset").addEventListener("click", reset);
+document.querySelector(".calculator-reset").addEventListener("click", reset);

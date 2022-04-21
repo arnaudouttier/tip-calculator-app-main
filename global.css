@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0;
+}
+
+/* BUTTONS */
+
+.btn {
+  border: 0;
+  cursor: pointer;
+  padding: var(--button_padding) 0;
+  border-radius: var(--border_radius_100);
+  font-weight: var(--bolder_200);
+  transition: background-color 0.4s ease;
+}
+
+.btn-primary {
+  background-color: var(--button_primary_bg);
+  color: var(--button_primary_text_color);
+}
+.btn-primary:hover {
+  background-color: var(--button_primary_active_bg);
+  color: var(--button_primary_active_text_color);
+}
+
+.btn-secondary {
+  background-color: var(--button_secondary_bg);
+  color: var(--button_secondary_text_color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--button_secondary_active_bg);
+  color: var(--button_secondary_active_text_color);
+}
+
+/* INPUTS */
+
+input {
+  text-align: right;
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--input_bg_color);
+  padding: var(--input_padding);
+  border-radius: var(--border_radius_100);
+  font-weight: var(--bolder_200);
+}
+
+input:focus {
+  border: 3px solid var(--border_active) !important;
+}
+
+/* LABEL */
+label {
+  display: block;
+}
+
+/* LAYOUT */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary_font);
+  background-color: var(--bg_page);
+  font-weight: var(--bolder_200);
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}

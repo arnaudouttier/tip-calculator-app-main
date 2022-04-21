@@ -11,45 +11,69 @@
     <main id="main">
       <div class="calculator">
         <section class="calculator-inputs">
-          <label for="bill-amount">Bill</label>
-          <input
-            type="text"
-            name="bill-amount"
-            id="bill-amount"
-            class="bill-input"
-            value=""
-            placeholder="$ 0.00"
-          />
-          <div class="bill-percentage">
-            <p>Select Tip %</p>
-            <button id="five-perc-btn" class="btn percentage-btn" value="5">
-              5%
-            </button>
-            <button id="ten-perc-btn" class="btn percentage-btn" value="10">
-              10%
-            </button>
-            <button id="fifteen-perc-btn" class="btn percentage-btn" value="15">
-              15%
-            </button>
-            <button id="twfive-perc-btn" class="btn percentage-btn" value="25">
-              25%
-            </button>
-            <button id="fifty-perc-btn" class="btn percentage-btn" value="50">
-              50%
-            </button>
+          <div class="calculator-amount">
+            <label for="bill-amount">Bill</label>
             <input
-              type="number"
-              name="custom-tip"
-              id="custom-tip"
+              type="text"
+              name="bill-amount"
+              id="bill-amount"
+              class="bill-input"
               value=""
-              min="0"
-              max="100"
-              placeholder="CUSTOM"
+              placeholder="$ 0.00"
             />
           </div>
-          <div class="number-people-group">
+          <div class="calculator-percentage">
+            <label>Select Tip %</label>
+            <div class="calculator-percentage-buttons">
+              <button
+                id="five-perc-btn"
+                class="btn btn-primary percentage-btn"
+                value="5"
+              >
+                5%
+              </button>
+              <button
+                id="ten-perc-btn"
+                class="btn btn-primary percentage-btn"
+                value="10"
+              >
+                10%
+              </button>
+              <button
+                id="fifteen-perc-btn"
+                class="btn btn-primary percentage-btn"
+                value="15"
+              >
+                15%
+              </button>
+              <button
+                id="twfive-perc-btn"
+                class="btn btn-primary percentage-btn"
+                value="25"
+              >
+                25%
+              </button>
+              <button
+                id="fifty-perc-btn"
+                class="btn btn-primary percentage-btn"
+                value="50"
+              >
+                50%
+              </button>
+              <input
+                type="number"
+                name="custom-tip"
+                id="custom-tip"
+                value=""
+                min="0"
+                max="100"
+                placeholder="CUSTOM"
+              />
+            </div>
+          </div>
+          <div class="calculator-people">
             <label for="people-number">Number of People</label>
-            <span class="span-input-warning">Can't be zero</span>
+            <span class="span-warning">Can't be zero</span>
             <input
               type="number"
               name="people-number"
@@ -61,16 +85,17 @@
             />
           </div>
         </section>
+
         <section class="calculator-result">
-          <div class="result-tip-amount">
-            <h3 class="result-title">Tip Amount <span>/Person</span></h3>
-            <h2 class="result-output">$ 0.00</h2>
+          <div class="calculator-tip-amount">
+            <label class="result-label">Tip Amount <span>/Person</span></label>
+            <h2 class="result-total">$ 0.00</h2>
           </div>
-          <div class="result-total">
-            <h3 class="result-title">Total <span>/Person</span></h3>
-            <h2 class="result-output">$ 0.00</h2>
+          <div class="calculator-total">
+            <label class="result-label">Total <span>/Person</span></label>
+            <h2 class="result-total">$ 0.00</h2>
           </div>
-          <button class="btn bill-reset">RESET</button>
+          <button class="btn btn-secondary calculator-reset">RESET</button>
         </section>
       </div>
     </main>

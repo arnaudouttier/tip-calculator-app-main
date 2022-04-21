@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+:root {
+  /* Color */
+  --clr_000: hsl(0, 0%, 100%);
+  --clr_100: hsl(189, 41%, 97%);
+  --clr_200: hsl(185, 41%, 84%);
+  --clr_300: hsl(172, 67%, 45%);
+  --clr_400: hsl(184, 14%, 56%);
+  --clr_500: hsl(186, 14%, 43%);
+  --clr_600: hsl(183, 100%, 15%);
+  --clr_700: hsl(347, 71%, 39%);
+
+  /* Sizes */
+  --size_1: 0.5rem; /* 8px */
+  --size_2: 0.75rem; /* 12px */
+  --size_3: 1rem; /* 16px */
+  --size_4: 1.25rem; /* 20px */
+  --size_5: 2rem; /* 32px */
+  --size_6: 2.5rem; /* 40px */
+  --size_7: 3rem; /* 48px */
+  --size_8: 4rem; /* 64px */
+
+  --size_9: 57.5rem; /* 920px */
+
+  /* Padding */
+  --padding_small: var(--size_1);
+  --padding_xsmall: var(--size_3);
+  --padding_medium: var(--size_5);
+  --padding_large: var(--size_6);
+  --padding_xlarge: var(--size_8);
+
+  /* Margin */
+  --margin_small: var(--size_1);
+  --margin_xsmall: var(--size_3);
+  --margin_medium: var(--size_5);
+  --margin_large: var(--size_6);
+  --margin_xlarge: var(--size_8);
+
+  /* Font */
+  --primary_font: "Space Mono", monospace;
+
+  /* Page */
+  --bg_page: var(--clr_200);
+
+  /* Buttons */
+  --button_padding: var(--size_3);
+
+  --button_primary_bg: var(--clr_600);
+  --button_primary_active_bg: var(--clr_300);
+  --button_primary_text_color: var(--clr_100);
+  --button_primary_active_text_color: var(--clr_100);
+
+  --button_secondary_bg: var(--clr_300);
+  --button_secondary_active_bg: var(--clr_200);
+  --button_secondary_text_color: var(--clr_600);
+  --button_secondary_active_text_color: var(--clr_100);
+
+  /* Bolder */
+  --bolder_100: 400;
+  --bolder_200: 700;
+
+  /* Border */
+  --border_active: var(--clr_400);
+  --border_active_warning: var(--clr_700);
+
+  /* Border Radius */
+  --border_radius_100: var(--size_1);
+  --border_radius_200: var(--size_2);
+  --border_radius_300: var(--size_3);
+
+  /* Iputs */
+  --input_bg_color: var(--clr_200);
+  --input_text_color: var(--clr_600);
+  --input_padding: var(--button_padding);
+
+  /* Labels */
+  --label_white: var(--clr_000);
+  --label_grey: var(--clr_500);
+  --label_warning: var(--clr_700);
+  --label_cyan: var(--clr_300);
+
+  /* CALCULATOR  */
+
+  --calculator_width: min(100vw, var(--size_9));
+  --calculator_bg: var(--clr_100);
+  --calculator_border_radius: var(--size_4);
+  --calculator_section_margin: var(--size_5);
+  --calculator_padding: clamp(
+    var(--size_4),
+    calc(1.25rem + ((1vw - 0.234375rem) * 3.2415)),
+    var(--size_6)
+  );
+
+  /* CALCULATOR INPUTS */
+
+  --calculator_inputs_perc_grid_gap: var(--size_3);
+  --calculator_inputs_label_color: var(--clr_400);
+  --calculator_inputs_amount_block_margin: var(--size_5);
+  --calculator_inputs_percentage_block_margin: var(--size_5);
+  --calculator_inputs_label_margin: var(--size_1);
+
+  /* CALCULATOR RESULT */
+
+  --calculator_result_bg: var(--clr_600);
+  --calculator_result_padding: var(--size_4);
+  --calculator_result_border_radius: var(--size_3);
+  --calculator_result_label_color: var(--clr_400);
+  --calculator-result_tt_text_color: var(--clr_300);
+  --calculator_result_tip_block_margin: var(--size_6);
+  --calculator_result__tt_block_margin: var(--size_6);
+  --calculator_result_warning_label_color: var(--label_warning);
+  --calculator_result_warning_border_color: var(--clr_700);
+}
