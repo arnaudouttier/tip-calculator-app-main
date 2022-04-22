@@ -37,25 +37,6 @@
   --margin_large: var(--size_6);
   --margin_xlarge: var(--size_8);
 
-  /* Font */
-  --primary_font: "Space Mono", monospace;
-
-  /* Page */
-  --bg_page: var(--clr_200);
-
-  /* Buttons */
-  --button_padding: var(--size_3);
-
-  --button_primary_bg: var(--clr_600);
-  --button_primary_active_bg: var(--clr_300);
-  --button_primary_text_color: var(--clr_100);
-  --button_primary_active_text_color: var(--clr_100);
-
-  --button_secondary_bg: var(--clr_300);
-  --button_secondary_active_bg: var(--clr_200);
-  --button_secondary_text_color: var(--clr_600);
-  --button_secondary_active_text_color: var(--clr_100);
-
   /* Bolder */
   --bolder_100: 400;
   --bolder_200: 700;
@@ -80,6 +61,26 @@
   --label_warning: var(--clr_700);
   --label_cyan: var(--clr_300);
 
+  /* Buttons */
+  --button_padding: var(--size_3);
+  --button_height: var(--size_7);
+
+  --button_primary_bg: var(--clr_600);
+  --button_primary_active_bg: var(--clr_300);
+  --button_primary_text_color: var(--clr_100);
+  --button_primary_active_text_color: var(--clr_600);
+
+  --button_secondary_bg: var(--clr_300);
+  --button_secondary_active_bg: var(--clr_200);
+  --button_secondary_text_color: var(--clr_600);
+  --button_secondary_active_text_color: var(--clr_100);
+
+  /* Font */
+  --primary_font: "Space Mono", monospace;
+
+  /* Page */
+  --bg_page: var(--clr_200);
+
   /* CALCULATOR  */
 
   --calculator_width: min(100vw, var(--size_9));
@@ -93,15 +94,16 @@
       var(--size_6)
     );
 
-  /* CALCULATOR INPUTS */
+  /* CALCULATOR-INPUTS */
 
   --calculator_inputs_perc_grid_gap: var(--size_3);
-  --calculator_inputs_label_color: var(--clr_400);
   --calculator_inputs_amount_block_margin: var(--size_5);
   --calculator_inputs_percentage_block_margin: var(--size_5);
+  --calculator_inputs_label_color: var(--clr_400);
   --calculator_inputs_label_margin: var(--size_1);
+  --calculator_inputs_custom_button_text_color: var(--clr_400);
 
-  /* CALCULATOR RESULT */
+  /* CALCULATOR-RESULT */
 
   --calculator_result_bg: var(--clr_600);
   --calculator_result_padding: var(--size_4);

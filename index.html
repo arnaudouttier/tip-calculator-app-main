@@ -12,61 +12,61 @@
       <div class="calculator">
         <section class="calculator-inputs">
           <div class="calculator-amount">
-            <label for="bill-amount">Bill</label>
+            <label for="bill">Bill</label>
             <input
-              type="text"
-              name="bill-amount"
+              type="number"
+              name="bill"
               id="bill-amount"
               class="bill-input"
               value=""
+              min="0"
               placeholder="$ 0.00"
             />
           </div>
-          <div class="calculator-percentage">
+          <div class="calculator-perc-block">
             <label>Select Tip %</label>
-            <div class="calculator-percentage-buttons">
-              <button
-                id="five-perc-btn"
-                class="btn btn-primary percentage-btn"
+            <div class="calculator-perc">
+              <input
+                type="radio"
+                class="calculator-perc-button"
+                id="five-perc"
                 value="5"
-              >
-                5%
-              </button>
-              <button
-                id="ten-perc-btn"
-                class="btn btn-primary percentage-btn"
+                name="checkbox-perc"
+              />
+              <input
+                type="radio"
+                class="btn btn-primary calculator-perc-button"
+                id="ten-perc"
                 value="10"
-              >
-                10%
-              </button>
-              <button
-                id="fifteen-perc-btn"
-                class="btn btn-primary percentage-btn"
+                name="checkbox-perc"
+              />
+              <input
+                type="radio"
+                class="calculator-perc-button"
+                id="fifteen-perc"
                 value="15"
-              >
-                15%
-              </button>
-              <button
-                id="twfive-perc-btn"
-                class="btn btn-primary percentage-btn"
+                name="checkbox-perc"
+              />
+              <input
+                type="radio"
+                class="calculator-perc-button"
+                id="tw-five-perc"
                 value="25"
-              >
-                25%
-              </button>
-              <button
-                id="fifty-perc-btn"
-                class="btn btn-primary percentage-btn"
+                name="checkbox-perc"
+              />
+              <input
+                type="radio"
+                class="calculator-perc-button"
+                id="fifty"
                 value="50"
-              >
-                50%
-              </button>
+                name="checkbox-perc"
+              />
               <input
                 type="number"
-                name="custom-tip"
-                id="custom-tip"
+                class="calculator-perc-button custom"
+                id="custom-perc"
                 value=""
-                min="0"
-                max="100"
+                name="custom-perc"
                 placeholder="CUSTOM"
               />
             </div>
@@ -76,12 +76,11 @@
             <span class="span-warning">Can't be zero</span>
             <input
               type="number"
-              name="people-number"
+              name="client"
               id="people-number"
+              value="1"
               class="bill-input"
-              value=""
               min="0"
-              placeholder="$ 0.00"
             />
           </div>
         </section>

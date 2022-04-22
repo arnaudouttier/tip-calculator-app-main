@@ -17,7 +17,7 @@
 /* CALCULATOR INPUTS */
 
 .calculator-amount,
-.calculator-percentage {
+.calculator-perc-block {
   margin-bottom: var(--calculator_inputs_amount_block_margin);
 }
 
@@ -26,17 +26,77 @@
   margin-bottom: var(--calculator_inputs_label_margin);
 }
 
-.calculator-percentage-buttons {
+.calculator-perc {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: var(--calculator_inputs_perc_grid_gap);
 }
 
-.calculator-inputs .span-warning {
+.calculator-perc-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--button_primary_text_color);
+  min-height: var(--button_height);
+}
+
+.calculator-perc-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--button_primary_bg);
+  border-radius: var(--border_radius_100);
+  transition: background-color 0.4s ease;
+}
+
+.calculator-perc-button:hover:before,
+.calculator-perc-button:checked:before {
+  background-color: var(--button_primary_active_bg);
+}
+
+.calculator-perc-button:last-child:before {
+  background-color: var(--input_bg_color);
+}
+
+.calculator-perc-button::after {
+  z-index: 1;
+}
+
+.calculator-perc-button:hover::after,
+.calculator-perc-button:checked::after {
+  color: var(--button_primary_active_text_color);
+}
+
+.calculator-perc-button:nth-child(1)::after {
+  content: "5%";
+}
+.calculator-perc-button:nth-child(2)::after {
+  content: "10%";
+}
+.calculator-perc-button:nth-child(3)::after {
+  content: "15%";
+}
+.calculator-perc-button:nth-child(4)::after {
+  content: "20%";
+}
+.calculator-perc-button:nth-child(5)::after {
+  content: "50%";
+}
+
+.calculator-perc-button.custom {
+  color: var(--calculator_inputs_custom_button_text_color);
+}
+
+.calculator-people .span-warning {
   display: none;
 }
 
 .calculator-people.warning .span-warning {
+  display: block;
   color: var(--calculator_result_warning_label_color);
 }
 
