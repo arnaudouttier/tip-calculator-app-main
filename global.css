@@ -80,12 +80,12 @@ body {
 
 #main {
   display: grid;
-  justify-content: center;
   align-content: flex-end;
 }
 
 @media (min-width: 1200px) {
   body {
+    zoom: 100%;
     background-position: 50% 12%;
   }
 
