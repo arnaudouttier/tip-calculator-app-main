@@ -68,7 +68,7 @@ label {
 
 body {
   width: 100%;
-  height : auto;
+  height: 100%;
   font-family: var(--page_font_family);
   background-color: var(--page_bg_color);
   font-weight: var(--page_font_weight);
@@ -79,7 +79,7 @@ body {
 
 #main {
   width: 100%;
-  height: inherit;
+  height: auto;
   display: grid;
   align-content: flex-end;
   justify-content:center;
