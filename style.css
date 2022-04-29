@@ -7,29 +7,44 @@
   width: var(--calculator_width);
   background-color: var(--calculator_bg);
   padding: var(--calculator_padding);
-  border-radius: var(--calculator_border_radius);
+  border-top-left-radius: var(--calculator_border_radius);
+  border-top-right-radius: var(--calculator_border_radius);
 }
 
 .calculator section:first-child {
   margin-bottom: var(--calculator_section_margin);
 }
 
-/* CALCULATOR INPUTS */
+/* Calculator-inputs */
 
 .calculator-amount,
 .calculator-perc-block {
-  margin-bottom: var(--calculator_inputs_amount_block_margin);
+  margin-bottom: var(--ci_amount_block_margin);
+  position: relative;
+}
+
+.calculator-inputs .bill-input {
+  font-size: var(--ci_font_size);
+  color: var(--ci_input_text_color);
 }
 
 .calculator-inputs label {
-  color: var(--calculator_inputs_label_color);
-  margin-bottom: var(--calculator_inputs_label_margin);
+  font-size: var(--ci_label_font_size);
+  color: var(--ci_label_color);
+  margin-bottom: var(--ci_label_margin);
+  font-weight: 900;
+}
+
+.calculator-inputs-input-icon {
+  position: absolute;
+  top: 50px;
+  left: 15px;
 }
 
 .calculator-perc {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: var(--calculator_inputs_perc_grid_gap);
+  grid-gap: var(--ci_perc_grid_gap);
 }
 
 .calculator-perc-button {
@@ -37,6 +52,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: var(--page_font_family);
   color: var(--button_primary_text_color);
   min-height: var(--button_height);
 }
@@ -49,7 +65,7 @@
   bottom: 0;
   left: 0;
   background-color: var(--button_primary_bg);
-  border-radius: var(--border_radius_100);
+  border-radius: var(--button_border_radius);
   transition: background-color 0.4s ease;
 }
 
@@ -63,6 +79,7 @@
 }
 
 .calculator-perc-button::after {
+  font-size: var(--ci_perc_font_size);
   z-index: 1;
 }
 
@@ -88,7 +105,19 @@
 }
 
 .calculator-perc-button.custom {
-  color: var(--calculator_inputs_custom_button_text_color);
+  padding: 0 16px 0 0;
+  font-family: var(--page_font_family);
+  font-size: var(--ci_perc_font_size);
+  color: var(--ci_custom_button_text_color);
+}
+
+.calculator-people {
+  position: relative;
+}
+
+.calculator-people .people-labels {
+  display: flex;
+  justify-content: space-between;
 }
 
 .calculator-people .span-warning {
@@ -97,34 +126,37 @@
 
 .calculator-people.warning .span-warning {
   display: block;
-  color: var(--calculator_result_warning_label_color);
+  color: var(--cr_warning_label_color);
 }
 
 .calculator-people.warning input:focus {
-  border: 2px solid var(--calculator_result_warning_border_color) !important;
+  border: 2px solid var(--cr_warning_border_color) !important;
 }
 
-/* CALCULATOR RESULT */
+/* Calculator-result */
 
 .calculator-result {
-  padding: var(--calculator_result_padding);
-  background-color: var(--calculator_result_bg);
-  border-radius: var(--calculator_result_border_radius);
+  padding: var(--cr_mobile_padding);
+  background-color: var(--cr_bg);
+  border-radius: var(--cr_border_radius);
 }
 
 .calculator-tip-amount,
 .calculator-total {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--calculator_result_tip_block_margin);
+  margin-bottom: var(--cr_tip_block_margin);
 }
 
 .calculator-result .calculator-reset {
   width: 100%;
+  font-size: var(--cr_btn_font_size);
 }
 
 .calculator-result label {
+  font-size: var(--cr_label_font_size);
   color: var(--label_white);
+  align-self: center;
 }
 
 .calculator-result span {
@@ -133,5 +165,26 @@
 }
 
 .calculator-result .result-total {
+  font-size: var(--cr_total_label_font_size);
   color: var(--label_cyan);
+}
+
+@media (min-width: 1200px) {
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--calculator_grid_column_gap);
+    border-radius: var(--calculator_border_radius);
+  }
+
+  .calculator-perc {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .calculator-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: var(--cr_desktop_padding);
+  }
 }

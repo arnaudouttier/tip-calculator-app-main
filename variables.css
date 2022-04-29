@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 
 :root {
-  /* Color */
+  /* COLOR */
+
   --clr_000: hsl(0, 0%, 100%);
   --clr_100: hsl(189, 41%, 97%);
   --clr_200: hsl(185, 41%, 84%);
@@ -11,7 +12,9 @@
   --clr_600: hsl(183, 100%, 15%);
   --clr_700: hsl(347, 71%, 39%);
 
-  /* Sizes */
+  /* SIZES */
+
+  --size_05: 0.25rem; /* 4px */
   --size_1: 0.5rem; /* 8px */
   --size_2: 0.75rem; /* 12px */
   --size_3: 1rem; /* 16px */
@@ -23,47 +26,56 @@
 
   --size_9: 57.5rem; /* 920px */
 
-  /* Padding */
+  /* PADDING */
+
   --padding_small: var(--size_1);
   --padding_xsmall: var(--size_3);
   --padding_medium: var(--size_5);
   --padding_large: var(--size_6);
   --padding_xlarge: var(--size_8);
 
-  /* Margin */
+  /* MARGIN */
+
   --margin_small: var(--size_1);
   --margin_xsmall: var(--size_3);
   --margin_medium: var(--size_5);
   --margin_large: var(--size_6);
   --margin_xlarge: var(--size_8);
 
-  /* Bolder */
+  /* BOLDER */
+
   --bolder_100: 400;
   --bolder_200: 700;
 
-  /* Border */
+  /* BORDER */
+
   --border_active: var(--clr_400);
   --border_active_warning: var(--clr_700);
 
-  /* Border Radius */
+  /* BORDER RADIUS */
+
   --border_radius_100: var(--size_1);
   --border_radius_200: var(--size_2);
   --border_radius_300: var(--size_3);
 
-  /* Iputs */
+  /* INPUT */
   --input_bg_color: var(--clr_200);
   --input_text_color: var(--clr_600);
-  --input_padding: var(--button_padding);
+  --input_padding: var(--size_1);
+  --input_border_radius: var(--size_05);
 
-  /* Labels */
+  /* LABELS */
+
   --label_white: var(--clr_000);
   --label_grey: var(--clr_500);
   --label_warning: var(--clr_700);
   --label_cyan: var(--clr_300);
 
-  /* Buttons */
-  --button_padding: var(--size_3);
+  /* BUTTONS */
+
+  --button_padding: var(--size_2);
   --button_height: var(--size_7);
+  --button_border_radius: var(--size_05);
 
   --button_primary_bg: var(--clr_600);
   --button_primary_active_bg: var(--clr_300);
@@ -75,11 +87,15 @@
   --button_secondary_text_color: var(--clr_600);
   --button_secondary_active_text_color: var(--clr_100);
 
-  /* Font */
+  /* FONT */
+
   --primary_font: "Space Mono", monospace;
 
-  /* Page */
-  --bg_page: var(--clr_200);
+  /* PAGE */
+
+  --page_bg_color: var(--clr_200);
+  --page_font_family: var(--primary_font);
+  --page_font_weight: var(--bolder_200);
 
   /* CALCULATOR  */
 
@@ -87,6 +103,7 @@
   --calculator_bg: var(--clr_100);
   --calculator_border_radius: var(--size_4);
   --calculator_section_margin: var(--size_5);
+  --calculator_grid_column_gap: 50px;
   --calculator_padding: var(--size_5)
     clamp(
       var(--size_4),
@@ -94,24 +111,36 @@
       var(--size_6)
     );
 
-  /* CALCULATOR-INPUTS */
+  /* Calculator-input */
 
-  --calculator_inputs_perc_grid_gap: var(--size_3);
-  --calculator_inputs_amount_block_margin: var(--size_5);
-  --calculator_inputs_percentage_block_margin: var(--size_5);
-  --calculator_inputs_label_color: var(--clr_400);
-  --calculator_inputs_label_margin: var(--size_1);
-  --calculator_inputs_custom_button_text_color: var(--clr_400);
+  --ci_perc_grid_gap: var(--size_3);
+  --ci_amount_block_margin: var(--size_3);
+  --ci_percentage_block_margin: var(--size_3);
+  --ci_perc_font_size: var(--size_4);
+  --ci_label_font_size: var(--size_3);
+  --ci_font_size: calc(var(--size_4) + 3px);
+  --ci_label_color: var(--label_grey);
+  --ci_input_text_color: var(--clr_600);
+  --ci_label_margin: var(--size_1);
+  --ci_custom_button_text_color: var(--clr_600);
 
-  /* CALCULATOR-RESULT */
+  /* Calculator-result */
 
-  --calculator_result_bg: var(--clr_600);
-  --calculator_result_padding: var(--size_4);
-  --calculator_result_border_radius: var(--size_3);
-  --calculator_result_label_color: var(--clr_400);
-  --calculator-result_tt_text_color: var(--clr_300);
-  --calculator_result_tip_block_margin: var(--size_6);
-  --calculator_result__tt_block_margin: var(--size_6);
-  --calculator_result_warning_label_color: var(--label_warning);
-  --calculator_result_warning_border_color: var(--clr_700);
+  --cr_bg: var(--clr_600);
+  --cr_mobile_padding: var(--size_4);
+  --cr_desktop_padding: 60px 40px 36px 40px;
+  --cr_border_radius: var(--size_3);
+  --cr_label_color: var(--clr_400);
+  --cr_label_font_size: var(--size_3);
+  --cr_total_label_font_size: clamp(
+    var(--size_5),
+    1.7727rem + 0.9697vw,
+    var(--size_7)
+  );
+  --cr_tt_text_color: var(--clr_300);
+  --cr_tip_block_margin: var(--size_4);
+  --cr__tt_block_margin: var(--size_4);
+  --cr_warning_label_color: var(--label_warning);
+  --cr_warning_border_color: var(--clr_700);
+  --cr_btn_font_size: var(--size_4);
 }
