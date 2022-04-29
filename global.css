@@ -80,7 +80,7 @@ body {
 
 #main {
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: grid;
   justify-content: center;
   align-content: flex-end;
