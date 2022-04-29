@@ -59,7 +59,7 @@
   --border_radius_300: var(--size_3);
 
   /* INPUT */
-  --input_bg_color: var(--clr_200);
+  --input_bg_color: var(--clr_100);
   --input_text_color: var(--clr_600);
   --input_padding: var(--size_1);
   --input_border_radius: var(--size_05);
@@ -100,7 +100,7 @@
   /* CALCULATOR  */
 
   --calculator_width: min(100vw, var(--size_9));
-  --calculator_bg: var(--clr_100);
+  --calculator_bg: var(--clr_000);
   --calculator_border_radius: var(--size_4);
   --calculator_section_margin: var(--size_5);
   --calculator_grid_column_gap: 50px;
