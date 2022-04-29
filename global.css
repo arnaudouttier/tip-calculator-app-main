@@ -67,9 +67,8 @@ label {
 }
 
 body {
-  zoom: 80%;
   width:100%;
-  height : 100%;
+  height : auto;
   font-family: var(--page_font_family);
   background-color: var(--page_bg_color);
   font-weight: var(--page_font_weight);
@@ -86,7 +85,6 @@ body {
 
 @media (min-width: 1200px) {
   body {
-    zoom: 100%;
     background-position: 50% 12%;
   }
 
