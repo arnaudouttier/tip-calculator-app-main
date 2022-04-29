@@ -67,6 +67,7 @@ label {
 }
 
 body {
+  zoom: 50%;
   width:100%;
   height:auto;
   font-family: var(--page_font_family);
