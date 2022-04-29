@@ -78,6 +78,8 @@ body {
 }
 
 #main {
+  width: 100%;
+  height: inherit;
   display: grid;
   align-content: flex-end;
   justify-content:center;
