@@ -67,6 +67,8 @@ label {
 }
 
 body {
+  width:100%;
+  height:auto;
   font-family: var(--page_font_family);
   background-color: var(--page_bg_color);
   font-weight: var(--page_font_weight);
